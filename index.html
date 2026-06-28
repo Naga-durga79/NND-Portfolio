@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nalla Naga Durga | Software Developer & AI/ML Engineer</title>
-    <meta name="description" content="Nalla Naga Durga - B.Tech CSE 9.23 CGPA | MERN Stack Developer | AI/ML Intern at IIT Ropar" />
-    <meta name="keywords" content="Nalla Naga Durga, MERN Stack Developer, AI/ML Engineer, Full Stack Developer, Portfolio" />
+    <meta name="description" content="Nalla Naga Durga - B.Tech CSE Final Year 9.23 CGPA | MERN Stack Developer | AI/ML Intern at IIT Ropar" />
+    <meta name="keywords" content="Nalla Naga Durga, MERN Stack Developer, AI/ML Engineer, Full Stack Developer, Portfolio, Final Year" />
     <link rel="canonical" href="https://naga-durga79.github.io/portfolio" />
 
     <!-- Google Fonts -->
@@ -23,17 +23,18 @@
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
                         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'shimmer': 'shimmer 2s linear infinite',
                         'spin-slow': 'spin 20s linear infinite',
+                        'cert-float': 'certFloat 4s ease-in-out infinite',
                     },
                     keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0px)' },
                             '50%': { transform: 'translateY(-15px)' },
                         },
-                        shimmer: {
-                            '0%': { backgroundPosition: '-200% center' },
-                            '100%': { backgroundPosition: '200% center' },
+                        certFloat: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '33%': { transform: 'translateY(-8px) rotate(1deg)' },
+                            '66%': { transform: 'translateY(-4px) rotate(-1deg)' },
                         }
                     }
                 }
@@ -93,13 +94,6 @@
 
         .gradient-text-gold {
             background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .gradient-text-pink {
-            background: linear-gradient(135deg, #ec4899, #8b5cf6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -223,6 +217,39 @@
                 font-size: 3rem;
             }
         }
+
+        /* Certificate Image Container */
+        .cert-img-container {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.4s ease;
+        }
+
+        .cert-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .glass-card:hover .cert-img-container img {
+            transform: scale(1.05);
+        }
+
+        .cert-img-container .fallback-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.2);
+        }
     </style>
 </head>
 
@@ -271,7 +298,7 @@
             <!-- Left Content -->
             <div class="order-2 lg:order-1 text-center lg:text-left">
                 <div class="inline-block px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs sm:text-sm font-semibold mb-6 animate-pulse-slow">
-                    <i class="fas fa-code mr-2"></i> Open to Opportunities
+                    <i class="fas fa-graduation-cap mr-2"></i> 2027 Graduate · Open to Opportunities
                 </div>
 
                 <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-4">
@@ -321,7 +348,7 @@
 
                     <!-- Image Container -->
                     <div class="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-white/10 profile-glow">
-                        <img src="profile.jpeg" alt="Nalla Naga Durga" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://ui-avatars.com/api/?name=Nalla+Naga+Durga&size=400&background=0a0a1a&color=00f5ff&font-size=0.33'" />
+                        <img src="./assets/images/profile.jpeg" alt="Nalla Naga Durga" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://ui-avatars.com/api/?name=Nalla+Naga+Durga&size=400&background=0a0a1a&color=00f5ff&font-size=0.33'" />
                     </div>
 
                     <!-- Floating Badges -->
@@ -331,6 +358,11 @@
 
                     <div class="absolute -top-2 -left-2 glass px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl border border-purple-500/30 animate-float text-xs sm:text-sm" style="animation-delay: 2s;">
                         <span class="font-bold text-purple-300"><i class="fas fa-code mr-1"></i> MERN Stack</span>
+                    </div>
+
+                    <!-- Final Year Badge -->
+                    <div class="absolute -bottom-4 -left-2 glass px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl border border-green-500/30 animate-float text-xs sm:text-sm" style="animation-delay: 3s;">
+                        <span class="font-bold text-green-300"><i class="fas fa-graduation-cap mr-1"></i> 2027 Graduate</span>
                     </div>
                 </div>
             </div>
@@ -342,8 +374,8 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             <div class="glass-card rounded-2xl p-5 sm:p-8 text-center">
                 <div class="text-3xl sm:text-4xl mb-2">🎓</div>
-                <div class="stat-number gradient-text">9.23</div>
-                <p class="text-gray-400 text-xs sm:text-sm">CGPA · B.Tech CSE</p>
+                <div class="stat-number gradient-text">9.23(till data)</div>
+                <p class="text-gray-400 text-xs sm:text-sm">CGPA · Final Year</p>
             </div>
             <div class="glass-card rounded-2xl p-5 sm:p-8 text-center">
                 <div class="text-3xl sm:text-4xl mb-2">💻</div>
@@ -370,13 +402,14 @@
 
         <div class="glass-card rounded-3xl p-8 sm:p-12 md:p-16 max-w-4xl mx-auto mt-10">
             <p class="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed text-center">
-                I am a <span class="text-cyan-400 font-semibold">B.Tech CSE undergraduate (Final Year)</span>
-                with a strong academic record of <span class="text-cyan-400 font-semibold">9.23 CGPA</span>.
+                I am a <span class="text-cyan-400 font-semibold">B.Tech CSE Final Year student</span>
+                with a strong academic record of <span class="text-cyan-400 font-semibold">9.23 CGPA(till date)</span>.
                 I have hands-on experience in <span class="text-purple-400 font-medium">MERN Stack development</span>
                 through my internship at <span class="text-blue-400 font-medium">IIT Ropar</span> and
                 <span class="text-green-400 font-medium">AI/ML</span> through APSCHE internship.
                 I thrive on building scalable applications, solving complex problems, and continuously
                 learning new technologies to create impactful software solutions.
+                Currently seeking <span class="text-yellow-400 font-medium">Internship opportunities</span> as a Software Developer or AI/ML Engineer.
             </p>
 
             <div class="flex flex-wrap gap-3 justify-center mt-6">
@@ -384,6 +417,7 @@
                 <span class="px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs sm:text-sm font-medium">AI/ML</span>
                 <span class="px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-300 text-xs sm:text-sm font-medium">DSA</span>
                 <span class="px-4 py-2 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs sm:text-sm font-medium">Cloud Computing</span>
+                <span class="px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-300 text-xs sm:text-sm font-medium">Final Year</span>
             </div>
         </div>
     </section>
@@ -647,57 +681,67 @@
         </div>
     </section>
 
-    <!-- ====== CERTIFICATES ====== -->
+    <!-- ====== CERTIFICATES WITH IMAGES ====== -->
     <section id="certificates" class="py-16 sm:py-20 px-4 sm:px-6 max-w-7xl mx-auto">
         <h2 class="section-title text-center mb-4">Certifications <span class="gradient-text">&amp; Achievements</span></h2>
         <p class="section-subtitle text-center">Elite credentials showcasing technical excellence</p>
 
-        <div class="grid sm:grid-cols-2 gap-6 sm:gap-8 mt-10">
-            <!-- NPTEL Cybersecurity -->
-            <div class="glass-card rounded-3xl p-6 sm:p-8 text-center group relative overflow-hidden">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-10">
+            <!-- Certificate 1: NPTEL Cybersecurity -->
+            <a href="cyber.jpeg" target="_blank" class="group glass-card rounded-3xl p-6 text-center relative overflow-hidden transition-all hover:scale-105">
                 <div class="absolute top-3 right-3 cert-badge text-white text-[10px] font-black px-3 py-1.5 rounded-full flex items-center gap-1">
                     <i class="fas fa-crown text-xs"></i> TOP 5%
                 </div>
-                <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <i class="fas fa-shield-alt text-3xl sm:text-4xl text-purple-400"></i>
+                <div class="cert-img-container">
+                    <img src="cyber.jpeg" alt="NPTEL Cyber Security Certificate" class="group-hover:scale-105 transition-transform duration-500" onerror="this.parentElement.innerHTML='<div class=\'fallback-icon\'><i class=\'fas fa-shield-alt\'></i></div>'">
                 </div>
-                <h5 class="text-lg sm:text-xl font-bold">NPTEL Cybersecurity</h5>
-                <p class="text-purple-300 text-sm font-medium">Silver Elite + Topper Badge</p>
-                <p class="text-gray-400 text-xs sm:text-sm mt-2">Advanced cybersecurity fundamentals with hands-on implementation</p>
-            </div>
+                <h5 class="text-base sm:text-lg font-bold">NPTEL Cybersecurity</h5>
+                <p class="text-purple-300 text-xs sm:text-sm font-medium">Silver Elite + Topper Badge</p>
+                <p class="text-gray-400 text-xs mt-2">Advanced cybersecurity fundamentals</p>
+                <span class="text-cyan-400 text-xs mt-3 inline-block group-hover:underline">Click to view certificate →</span>
+            </a>
 
-            <!-- NPTEL AI for Management -->
-            <div class="glass-card rounded-3xl p-6 sm:p-8 text-center group relative overflow-hidden">
+            <!-- Certificate 2: NPTEL AI for Management -->
+            <a href="AI-NPTEL.jpeg" target="_blank" class="group glass-card rounded-3xl p-6 text-center relative overflow-hidden transition-all hover:scale-105">
                 <div class="absolute top-3 right-3 cert-badge-green text-white text-[10px] font-black px-3 py-1.5 rounded-full flex items-center gap-1">
                     <i class="fas fa-medal text-xs"></i> SILVER
                 </div>
-                <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-emerald-500/30 to-teal-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <i class="fas fa-robot text-3xl sm:text-4xl text-emerald-400"></i>
+                <div class="cert-img-container">
+                    <img src="AI-NPTEL.jpeg.jpeg" alt="NPTEL AI for Management Certificate" class="group-hover:scale-105 transition-transform duration-500" onerror="this.parentElement.innerHTML='<div class=\'fallback-icon\'><i class=\'fas fa-robot\'></i></div>'">
                 </div>
-                <h5 class="text-lg sm:text-xl font-bold">NPTEL AI for Management</h5>
-                <p class="text-emerald-300 text-sm font-medium">Silver Badge</p>
-                <p class="text-gray-400 text-xs sm:text-sm mt-2">AI concepts and applications for business management</p>
-            </div>
+                <h5 class="text-base sm:text-lg font-bold">NPTEL AI for Management</h5>
+                <p class="text-emerald-300 text-xs sm:text-sm font-medium">Silver Badge</p>
+                <p class="text-gray-400 text-xs mt-2">AI concepts for business management</p>
+                <span class="text-cyan-400 text-xs mt-3 inline-block group-hover:underline">Click to view certificate →</span>
+            </a>
 
-            <!-- AICTE Cloud -->
-            <div class="glass-card rounded-3xl p-6 sm:p-8 text-center group">
-                <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-blue-500/30 to-cyan-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <i class="fas fa-cloud-upload-alt text-3xl sm:text-4xl text-blue-400"></i>
+            <!-- Certificate 3: AICTE Cloud -->
+            <a href="cloud.jpeg" target="_blank" class="group glass-card rounded-3xl p-6 text-center relative overflow-hidden transition-all hover:scale-105">
+                <div class="absolute top-3 right-3 cert-badge-blue text-white text-[10px] font-black px-3 py-1.5 rounded-full flex items-center gap-1">
+                    <i class="fas fa-cloud text-xs"></i> VIRTUAL
                 </div>
-                <h5 class="text-lg sm:text-xl font-bold">AICTE Cloud Foundations</h5>
-                <p class="text-blue-300 text-sm font-medium">Virtual Internship</p>
-                <p class="text-gray-400 text-xs sm:text-sm mt-2">AWS, Azure & GCP fundamentals</p>
-            </div>
+                <div class="cert-img-container">
+                    <img src="cloud.jpeg" alt="AICTE Cloud Foundations Certificate" class="group-hover:scale-105 transition-transform duration-500" onerror="this.parentElement.innerHTML='<div class=\'fallback-icon\'><i class=\'fas fa-cloud-upload-alt\'></i></div>'">
+                </div>
+                <h5 class="text-base sm:text-lg font-bold">AICTE Cloud Foundations</h5>
+                <p class="text-blue-300 text-xs sm:text-sm font-medium">Virtual Internship</p>
+                <p class="text-gray-400 text-xs mt-2">AWS, Azure & GCP fundamentals</p>
+                <span class="text-cyan-400 text-xs mt-3 inline-block group-hover:underline">Click to view certificate →</span>
+            </a>
 
-            <!-- AICTE AI/ML -->
-            <div class="glass-card rounded-3xl p-6 sm:p-8 text-center group">
-                <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-pink-500/30 to-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <i class="fas fa-microchip text-3xl sm:text-4xl text-pink-400"></i>
+            <!-- Certificate 4: AICTE AI/ML -->
+            <a href="aiml-edu.jpeg" target="_blank" class="group glass-card rounded-3xl p-6 text-center relative overflow-hidden transition-all hover:scale-105">
+                <div class="absolute top-3 right-3 bg-gradient-to-br from-pink-500 to-purple-600 text-white text-[10px] font-black px-3 py-1.5 rounded-full flex items-center gap-1 shadow-lg">
+                    <i class="fas fa-microchip text-xs"></i> VIRTUAL
                 </div>
-                <h5 class="text-lg sm:text-xl font-bold">AICTE AI/ML</h5>
-                <p class="text-pink-300 text-sm font-medium">Virtual Internship</p>
-                <p class="text-gray-400 text-xs sm:text-sm mt-2">Hands-on AI/ML fundamentals</p>
-            </div>
+                <div class="cert-img-container">
+                    <img src="aiml-edu.jpeg" alt="AICTE AI/ML Certificate" class="group-hover:scale-105 transition-transform duration-500" onerror="this.parentElement.innerHTML='<div class=\'fallback-icon\'><i class=\'fas fa-brain\'></i></div>'">
+                </div>
+                <h5 class="text-base sm:text-lg font-bold">AICTE AI/ML</h5>
+                <p class="text-pink-300 text-xs sm:text-sm font-medium">Virtual Internship</p>
+                <p class="text-gray-400 text-xs mt-2">Hands-on AI/ML fundamentals</p>
+                <span class="text-cyan-400 text-xs mt-3 inline-block group-hover:underline">Click to view certificate →</span>
+            </a>
         </div>
 
         <!-- Achievements -->
@@ -774,7 +818,7 @@
                 <a href="https://github.com/Naga-durga79" target="_blank" class="px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-gray-800 text-white font-semibold hover:shadow-lg hover:shadow-gray-500/20 transition-all hover:scale-105 flex items-center gap-2 text-sm sm:text-base">
                     <i class="fab fa-github"></i> GitHub
                 </a>
-                <a href="resume (3).png" download class="px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl glass-card text-white font-semibold border border-white/10 hover:border-cyan-400/40 transition-all hover:scale-105 flex items-center gap-2 text-sm sm:text-base">
+                <a href="resume(3).jpeg" download class="px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl glass-card text-white font-semibold border border-white/10 hover:border-cyan-400/40 transition-all hover:scale-105 flex items-center gap-2 text-sm sm:text-base">
                     <i class="fas fa-file-pdf"></i> Download Resume
                 </a>
             </div>
@@ -784,7 +828,7 @@
     <!-- ====== FOOTER ====== -->
     <footer class="py-8 sm:py-10 px-4 sm:px-6 border-t border-white/10 text-center">
         <p class="text-gray-500 text-xs sm:text-sm">
-            &copy; 2026 Nalla Naga Durga. Built with <i class="fas fa-heart text-red-400"></i> using Tailwind CSS.
+            &copy; 2027 Graduate. Nalla Naga Durga. Built with <i class="fas fa-heart text-red-400"></i> using Tailwind CSS.
         </p>
         <div class="flex justify-center gap-4 mt-3 text-gray-600 text-xs">
             <span>MERN Stack</span>
@@ -792,6 +836,8 @@
             <span>AI/ML</span>
             <span>·</span>
             <span>9.23 CGPA</span>
+            <span>·</span>
+            <span>Final Year</span>
         </div>
     </footer>
 
